@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Registration Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="file"],
+    button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    .radio-group {
+      margin-top: 5px;
+    }
+    .radio-group input {
+      margin-right: 5px;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>User Registration</h2>
+  <form action="#" method="POST" enctype="multipart/form-data">
+    
+    <!-- Username -->
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required minlength="3" placeholder="Enter your username">
+
+    <!-- Password -->
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required minlength="6" placeholder="Enter your password">
+
+    <!-- User Type (Radio Buttons) -->
+    <label>User Type</label>
+    <div class="radio-group">
+      <input type="radio" id="admin" name="userType" value="admin" required>
+      <label for="admin" style="display:inline;">Admin</label>
+
+      <input type="radio" id="user" name="userType" value="user" required>
+      <label for="user" style="display:inline;">User</label>
+    </div>
+
+    <!-- File Upload -->
+    <label for="profilePic">Profile Picture</label>
+    <input type="file" id="profilePic" name="profilePic" accept="image/*" required>
+
+    <!-- Submit Button -->
+    <button type="submit">Register</button>
+
+  </form>
+
+</body>
+</html>
